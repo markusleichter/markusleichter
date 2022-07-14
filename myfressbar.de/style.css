@@ -1,0 +1,26 @@
+/*
+ Theme Name:   Hello Elementor myfressbar
+ Description:  Hello Elementor Child Theme
+ Author:       lemarkus
+ Author URI:   httpw://www.myfressbar.de
+ Template:     hello-elementor
+ Version:      1.0
+ Text Domain:  hello-elementor-myfressbar
+*/
+
+.table-cell:nth-child(1) {background: wheat}
+.table-cell:nth-child(2) {background: wheat}
+.table-cell:nth-child(3) {background: wheat}
+.table-cell:nth-child(4) {background: wheat}
+
+@media (min-width: 40em) {
+.table { 
+   display: table;
+   border-spacing: 0.5em;
+}
+.table-row {display: table-row; }
+.table-cell {	
+	display: table-cell; 
+	text-align: right;
+}
+}

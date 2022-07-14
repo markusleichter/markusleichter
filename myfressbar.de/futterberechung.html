@@ -1,0 +1,97 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    jQuery( document ).ready(function( $ ){
+        jQuery( document ).on('submit_success', function(event, response){
+            document.getElementById("tagesration").innerHTML = response.data['1'].tagesration + ' g';
+            document.getElementById("wochenration").innerHTML = Math.round(response.data['1'].tagesration * 7) + ' g';
+			document.getElementById("tagesrationVeggie").innerHTML = response.data['1'].tagesrationVeggie + ' g';
+            document.getElementById("wochenrationVeggie").innerHTML = Math.round(response.data['1'].tagesrationVeggie * 7) + ' g';
+            document.getElementById("tagesRationVeggieGemuese").innerHTML = response.data['1'].tagesRationVeggieGemuese + ' g';
+            document.getElementById("wochenRationVeggieGemuese").innerHTML = Math.round(response.data['1'].tagesRationVeggieGemuese * 7) + ' g';
+            document.getElementById("tagesRationVeggieObst").innerHTML = response.data['1'].tagesRationVeggieObst + ' g';
+            document.getElementById("wochenRationVeggieObst").innerHTML = Math.round(response.data['1'].tagesRationVeggieObst * 7) + ' g';
+            document.getElementById("tagesRationFleisch").innerHTML = response.data['1'].tagesRationFleisch + ' g';
+            document.getElementById("wochenRationFleisch").innerHTML = Math.round(response.data['1'].tagesRationFleisch * 7) + ' g';;
+            document.getElementById("tagesRationMuskelFleisch").innerHTML = response.data['1'].tagesRationMuskelFleisch + ' g';
+            document.getElementById("wochenRationMuskelFleisch").innerHTML = Math.round(response.data['1'].tagesRationMuskelFleisch * 7)+ ' g';
+            document.getElementById("tagesRationPansen").innerHTML = response.data['1'].tagesRationPansen + ' g';
+            document.getElementById("wochenRationPansen").innerHTML = Math.round(response.data['1'].tagesRationPansen * 7) + ' g';
+            document.getElementById("tagesRationInnereien").innerHTML = response.data['1'].tagesRationInnereien + ' g';
+            document.getElementById("wochenRationInnereien").innerHTML = Math.round(response.data['1'].tagesRationInnereien * 7) + ' g';
+            document.getElementById("tagesRationRfk").innerHTML = response.data['1'].tagesRationRfk + ' g';
+            document.getElementById("wochenRationRfk").innerHTML = Math.round(response.data['1'].tagesRationRfk * 7) + ' g';
+			document.getElementById("gewicht").innerHTML = response.data['1'].gewicht + ' kg';
+			document.getElementById("faktor").innerHTML = response.data['1'].faktor + ' %';
+			document.getElementById("form-field-gewicht").value = response.data['1'].gewicht;
+			document.getElementById("form-field-faktor").value = response.data['1'].faktor;
+        });
+    });
+    
+    
+</script>
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell">Gewicht</div>
+        <div class="table-cell" id='gewicht'></div>
+    </div>
+	<div class="table-row">
+		<div class="table-cell">Futtermenge</div>
+		<div class="table-cell" id='faktor'></div>
+	</div>
+</div>	
+<div class="table">
+	<div class="table-row">
+		<div class="table-cell">&nbsp;</div>
+		<div class="table-cell">Tagesration</div>
+		<div class="table-cell">Wochenration</div>
+
+	</div>
+	<div class="table-row">
+		<div class="table-cell">Gesamt</div>
+		<div class="table-cell" id='tagesration'></div>
+		<div class="table-cell" id='wochenration'></div>
+	</div>
+	
+	<div class="table-row">
+		<div class="table-cell">Fleisch</div>
+		<div class="table-cell" id='tagesRationFleisch'></div>
+		<div class="table-cell" id='wochenRationFleisch'></div>
+	</div>
+	<div class="table-row">
+		<div class="table-cell">Muskelfleisch</div>
+		<div class="table-cell" id='tagesRationMuskelFleisch'></div>
+		<div class="table-cell" id='wochenRationMuskelFleisch'></div>
+	</div>
+	<div class="table-row">
+		<div class="table-cell">Pansen</div>
+		<div class="table-cell" id='tagesRationPansen'></div>
+		<div class="table-cell" id='wochenRationPansen'></div>
+	</div>
+	<div class="table-row">
+		<div class="table-cell">Innereien</div>
+		<div class="table-cell" id='tagesRationInnereien'></div>
+		<div class="table-cell" id='wochenRationInnereien'></div>	
+	</div>
+	<div class="table-row">
+		<div class="table-cell">RFK</div>
+		<div class="table-cell" id='tagesRationRfk'></div>
+		<div class="table-cell" id='wochenRationRfk'></div>
+	</div>
+	<div class="table-row">
+		<div class="table-cell">Veggie</div>
+		<div class="table-cell" id='tagesrationVeggie'></div>
+		<div class="table-cell" id='wochenrationVeggie'></div>
+	</div>
+	<div class="table-row">
+		<div class="table-cell">Gemüse</div>
+		<div class="table-cell" id='tagesRationVeggieGemuese'></div>
+		<div class="table-cell" id='wochenRationVeggieGemuese'></div>
+	</div>
+	<div class="table-row">
+		<div class="table-cell">Obst</div>
+		<div class="table-cell" id='tagesRationVeggieObst'></div>
+		<div class="table-cell" id='wochenRationVeggieObst'></div>
+	</div>
+</div>
+
+
