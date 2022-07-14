@@ -23,16 +23,16 @@ function calculateFutterplan($gewicht, $faktor) {
 	$result['tagesrationVeggie'] = $tagesrationVeggie;
 	$result['tagesRationFleisch'] = $tagesRationFleisch;
 	
-	$tagesRationMuskelFleisch = round($tagesRationFleisch * 0.6 ,1);
-	$result['tagesRationMuskelFleisch'] = $tagesRationMuskelFleisch;
+	
 	
 	$result['tagesRationVeggieGemuese'] = round($tagesrationVeggie * 0.75 , 1);
 	$result['tagesRationVeggieObst'] =  round($tagesrationVeggie * 0.25, 1);
 	
-	
-	$result['tagesRationPansen'] = 10;
-	$result['tagesRationInnereien'] = 10;
-	$result['tagesRationRfk'] = 10;
+	$tagesRationMuskelFleisch = round($tagesRationFleisch * 0.5 ,1);
+	$result['tagesRationMuskelFleisch'] = $tagesRationMuskelFleisch;
+	$result['tagesRationPansen'] = round($tagesRationFleisch * 0.2 ,1);
+	$result['tagesRationInnereien'] = round($tagesRationFleisch * 0.15 ,1);
+	$result['tagesRationRfk'] = round($tagesRationFleisch * 0.15 ,1);
 	$result['gewicht'] = $gewicht;
 	$result['faktor'] = $faktor;
 	return $result;
